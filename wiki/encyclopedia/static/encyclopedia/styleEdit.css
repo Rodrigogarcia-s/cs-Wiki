@@ -1,0 +1,27 @@
+body{
+    padding: 40px;
+}
+
+form {
+    height: 500px;
+    display:flex ;
+    flex-direction: column;   
+    
+}
+form #id_title{
+    width:max-content;
+    
+}
+form #id_content{
+    min-height: 200px ;
+    min-width: 500px;
+} 
+
+form .sumbitBtn{
+    margin:20px 0;
+    width: 100px;
+    height: 50px;
+    
+}
+
+/* #I was adding some style */

@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'encyclopedia/styleEdit.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Edit Your Page!</h2>
+    <form action="">
+    {{form | safe}}
+    <input class="sumbitBtn" type="submit" value="Create">
+    </form> 
+    <div>
+        <a href="{% url 'index' %}">Home</a>
+    </div>
+    <div>
+        <a href="{% url 'NewPage' %}"> Create New Page</a>
+    </div>
+</body>
+</html>
+    

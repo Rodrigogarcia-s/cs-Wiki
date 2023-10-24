@@ -1,0 +1,30 @@
+
+{% extends "encyclopedia/layout.html"%}
+{% block title %}
+    New Page
+{% endblock %}
+{% block form %}
+<h3>Create a New Page!</h3>
+<form class="search-form" method="post">
+{% csrf_token %}
+{{form.as_p}}
+<input type="submit" value="Create">
+</form>
+  {% if messages %}
+    <ul class="messages">
+       {% for message in messages %} 
+            {{ message }}</li> 
+        {% endfor %} 
+    </ul>
+{% endif %}
+{% endblock %}
+{% block body %}
+    <h1>All Pages</h1>
+
+    <ul>
+        {% for entry in entries %}
+        <a href="wiki/{{ entry|safe }}"><li>{{entry|safe}}</li></a>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
